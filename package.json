@@ -1,0 +1,70 @@
+{
+    "name": "boilerplate",
+    "version": "1.0.0",
+    "description": "Personalized boilerplate for Node.js websites based on bengrunfeld/expack",
+    "main": "./src/server/server.js",
+    "scripts": {
+        "build": "./bin/build",
+        "build-dev": "./bin/build-dev",
+        "start": "node ./public/server.js",
+        "test": "./bin/test",
+        "nodemon": "nodemon ./public/server.js",
+        "coverage": "./bin/test-coverage",
+        "watch:backEnd": "./bin/watch-server",
+        "watch:frontEnd": "./bin/watch-client",
+        "dev": "npm-run-all -p nodemon watch:backEnd watch:frontEnd"
+    },
+    "jest": {
+        "moduleNameMapper": {
+            "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+            "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/scotmcc/boilerplate.git"
+    },
+    "keywords": [
+        "boilerplate",
+        "webpack",
+        "express",
+        "html5"
+    ],
+    "author": "Scot McConnaughay <scotmcc@gmail.com> (http://cutlass.tech/)",
+    "license": "Unlicense",
+    "bugs": {
+        "url": "https://github.com/scotmcc/boilerplate/issues"
+    },
+    "homepage": "https://github.com/scotmcc/boilerplate#readme",
+    "dependencies": {
+        "express": "4.17.1",
+        "socket.io": "2.3.0",
+        "socket.io-client": "2.3.0"
+    },
+    "devDependencies": {
+        "@babel/core": "7.6.4",
+        "@babel/preset-env": "7.6.3",
+        "babel-eslint": "10.0.3",
+        "babel-loader": "8.0.6",
+        "css-loader": "3.2.0",
+        "eslint": "6.6.0",
+        "eslint-loader": "3.0.2",
+        "eslint-plugin-node": "10.0.0",
+        "file-loader": "4.2.0",
+        "html-loader": "0.5.5",
+        "html-webpack-plugin": "3.2.0",
+        "jest": "24.9.0",
+        "mini-css-extract-plugin": "0.8.0",
+        "nodemon": "1.19.4",
+        "npm-run-all": "4.1.5",
+        "optimize-css-assets-webpack-plugin": "5.0.3",
+        "style-loader": "1.0.0",
+        "uglifyjs-webpack-plugin": "2.2.0",
+        "url-loader": "2.2.0",
+        "webpack": "4.41.2",
+        "webpack-cli": "3.3.9",
+        "webpack-dev-middleware": "3.7.2",
+        "webpack-hot-middleware": "2.25.0",
+        "webpack-node-externals": "1.7.2"
+    }
+}

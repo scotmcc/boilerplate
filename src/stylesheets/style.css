@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.background-top {
+    background-image: url(../images/bg-header.png);
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.background-bottom {
+    background-image: url(../images/bg-footer.png);
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
