@@ -1,1 +1,2 @@
-webpack --watch --mode development --config webpack.server.config.js
+mongod --config ./mongod.conf
+webpack --watch --mode development --config ./webpack.server.config.js

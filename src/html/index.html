@@ -11,9 +11,41 @@
         <link rel="shortcut icon" href="#">
     </head>
     <body>
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <ol id=l></ol>
         <div class="background-top"></div>
         <div class="background-bottom"></div>
+        <div class="page">
+            <h1>Boilerplate</h1>
+            <p>Hello world! This is HTML5 Boilerplate.</p>
+            <h2>WebSocket Test</h2>
+            <table>
+                <tr>
+                    <td>Message: <input type="text" id="message" /></td>
+                    <td><button id="send">Send</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="response"></textarea></td>
+                </tr>
+            </table>
+            <h2>Database Test</h2>
+            <table>
+                <tr>
+                    <td>Cat's Name: <input type="text" id="entry" /></td>
+                    <td><button id="add">Add Record</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="database"></textarea></td>
+                </tr>
+            </table>
+            <h2>Session Test</h2>
+            <table>
+                <tr>
+                    <td>User's Name: <input type="text" id="user" /></td>
+                    <td><button id="setName">Set</button><button id="fetch">Get</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea id="session"></textarea></td>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>

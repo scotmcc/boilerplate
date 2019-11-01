@@ -3,23 +3,39 @@
 import $ from './jquery';
 import io from 'socket.io-client';
 
-$( document ).ready(function() {
+const socket = io('ws://localhost:3000');
+socket.on('message', function (data) {
+    $('#response').val(data);
+});
 
-    const socket = io('ws://localhost:3000');
+socket.on('database', function (data) {
+    $('#database').val(data);
+});
 
-    console.log('init');
+socket.on('session', function (data) {
+    console.log('session', data);
+    $('#session').val(JSON.stringify(data));
+});
 
-    socket.on('connect', onConnect);
-    socket.on('news', onMessage);
-
-    function onConnect(){
-        console.log('connect ', socket.id);
-        socket.emit('foo', {
-            foo: 'bar'
+$( document ).ready(function() { 
+    $('#send').mousedown(function () {
+        var message = $('#message').val();
+        socket.emit('message', message);
+    });
+    $('#add').mousedown(function () {
+        var message = $('#entry').val();
+        socket.emit('database', message);
+    });
+    $('#fetch').mousedown(function () {
+        socket.emit('session');
+    });
+    $('#setName').mousedown(function () {
+        $.post('/session', {
+            name: 'joe'
+        }, function () {
+            $.get('/session', function (data) {
+                $('#session').val(data);
+            })
         });
-    }
-
-    function onMessage(message){
-        console.log('news ', message);
-    }
+    })
 });

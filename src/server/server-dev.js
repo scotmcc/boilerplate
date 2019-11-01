@@ -1,4 +1,4 @@
-/* globals console process */
+/* globals */
 
 import start from './WebServer';
 import config from '../../webpack.dev.config.js';

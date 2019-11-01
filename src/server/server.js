@@ -1,7 +1,7 @@
 /* globals console process */
 
 import WebServer from './WebServer';
-import config from '../../webpack.config.js';
+import config from '../webpack.config.js';
 
 const port = process.env.PORT || 80;
 const Server = new WebServer();
